@@ -1,0 +1,44 @@
+From 12556ba12548b12131c5b3d0c7bbe095facd8cd1 Mon Sep 17 00:00:00 2001
+From: ojy9523 <junyepoh@Junyepui-MacBook-Pro.local>
+Date: Sun, 2 Oct 2016 15:33:04 +0900
+Subject: [PATCH] Add d3 practice.html
+
+---
+ d3 practice.html | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+ create mode 100644 d3 practice.html
+
+diff --git a/d3 practice.html b/d3 practice.html
+new file mode 100644
+index 0000000..ce64746
+--- /dev/null
++++ b/d3 practice.html	
+@@ -0,0 +1,25 @@
++ 
++<! doctype html> 
++<html> 
++<head> 
++     <title> D3 tutorial </title> 
++     <script src = “http://d3js.org/d3.v3.min.js”></script> 
++</head> 
++<body> 
++                 <script> 
++ 
++               var dataArray = [20, 40, 50]; 
++ 
++                  var canvas =  d3.select(“body”) 
++                         .append(“svg”) 
++                              .attr(“width”,500) 
++                               .attr(“height”,500); 
++ 
++                     
++               var bars = canvas.selectAll(“rect”)                                    .data(dataArray) 
++                                   .enter()                                        .appned(“rect”)                                            .attr(“width”,function (d) {return d; })                                              .attr(“height”, 50); 
++                                                 .attr(“y”,function(d,i){return i *100});                                 
++          </script> 
++ 
++</body> 
++</html> 
+-- 
+2.8.1
+
